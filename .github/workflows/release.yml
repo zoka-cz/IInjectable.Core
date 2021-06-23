@@ -29,5 +29,5 @@ jobs:
       with:
           PROJECT_FILE_PATH: _src/IInjectable.Core/IInjectable.Core.csproj
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
-          VERSION_STATIC: $VERSION
+          VERSION_STATIC: ${{ env.VERSION }}
           TAG_COMMIT: false
