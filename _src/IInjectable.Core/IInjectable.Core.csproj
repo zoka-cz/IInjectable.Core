@@ -4,7 +4,6 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <AssemblyName>Zoka.IInjectable.Core</AssemblyName>
     <RootNamespace>Zoka.IInjectable</RootNamespace>
-    <Version>0.9.0</Version>
     <Authors>Zoka</Authors>
     <Company>Zoka</Company>
     <Description>Simple interface IInjectable, which mark the class as injectable, so it may be registered during Startup of Core application.</Description>
@@ -12,7 +11,7 @@
     <PackageProjectUrl>https://github.com/zoka-cz/IInjectable.Core</PackageProjectUrl>
     <RepositoryUrl>https://github.com/zoka-cz/IInjectable.Core</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
