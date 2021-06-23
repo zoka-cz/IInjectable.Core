@@ -23,7 +23,7 @@ jobs:
     - name: Publish Zoka.IInjectable.Core nuget to nuget.org
       uses: brandedoutcast/publish-nuget@v2.5.2
       with:
-          PROJECT_FILE_PATH: _src\IInjectable.Core\IInjectable.Core.csproj
+          PROJECT_FILE_PATH: _src/IInjectable.Core/IInjectable.Core.csproj
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
           VERSION_STATIC: $VERSION
           TAG_COMMIT: false
