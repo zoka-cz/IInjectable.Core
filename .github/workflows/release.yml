@@ -23,7 +23,7 @@ jobs:
         echo $VERSION
         echo ${{ env.VERSION }}
     - name: Build
-      run: dotnet build "_src\IInjectable.Core\IInjectable.Core.csproj" --configuration Release /p:Version=${VERSION}
+      run: dotnet build "_src\IInjectable.Core.sln" --configuration Release /p:Version=${VERSION}
     - name: Publish Zoka.IInjectable.Core nuget to nuget.org
       uses: brandedoutcast/publish-nuget@v2.5.2
       with:
