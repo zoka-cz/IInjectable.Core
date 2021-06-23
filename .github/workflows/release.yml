@@ -21,7 +21,7 @@ jobs:
     - name: Test VERSION
       run: |
         echo $VERSION
-        echo ${{env.VERSION}}
+        echo ${{ env.VERSION }}
     - name: Build
       run: dotnet build "_src\IInjectable.Core\IInjectable.Core.csproj" --configuration Release /p:Version=${VERSION}
     - name: Publish Zoka.IInjectable.Core nuget to nuget.org
