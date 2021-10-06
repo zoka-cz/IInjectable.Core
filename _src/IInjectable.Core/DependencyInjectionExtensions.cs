@@ -18,7 +18,20 @@ namespace Zoka.IInjectable
 				foreach (Type t in a.GetTypes())
 				{
 					if (typeof(IInjectable).IsAssignableFrom(t) && !t.IsAbstract && !t.IsInterface)
-						_service_collection.AddScoped(t);
+					{
+						var inject_as_collection = t.GetCustomAttributes<InjectAsAttribute>();
+						if (inject_as_collection.Any())
+						{
+							foreach (var inject_as_attribute in inject_as_collection)
+							{
+								_service_collection.AddScoped(inject_as_attribute.InjectAsType, t);
+							}
+						}
+						else
+						{
+							_service_collection.AddScoped(t);
+						}
+					}
 				}
 			}
 
